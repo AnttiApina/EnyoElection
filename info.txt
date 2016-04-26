@@ -1,0 +1,35 @@
+MITÄ?
+
+VAALIKONE KOPIO:
+
+
+- JSON-MODEL:
+answer-model: [{
+ candidate_id: 1
+ name: "Kille Kallle",
+ questions: [{id: 1, val: 1}, {id: 2, val: 0.35}];
+}, {
+ name: "KALLE Kunge",
+ questions: [{id: 1, val: -0.5}, {id: 2, val: 0.95}];
+}];
+
+
+questions-model: [{
+  id: 1,
+  question: "Oletko mielestäsi hyvä poliitikko?"
+
+}]
+
+
+
+UI:sta saadut vastaukset filteröidään. Event propagationin avulla malli päivittyy ja näiden pohjalta vaalilista muuttuu.
+
+
+
+Slidereista saadut arvot päivittyvät parenttiin -> ([{id, val}, {id, val}]) ==> päivitä lista UI.
+
+
+ELEMENTTIRAKENNE:
+ VAALIKONE HOLDER:
+  -LISTA SLIDEREISTA
+  -LISTA EHDOKKAISTA
